@@ -1,6 +1,7 @@
 # The following function iteratively calculates the square root of a number
 
-small_error_margin = 10^(-5)
+# Adjust the margin to increase the precision of the square root
+small_error_margin = 10^(-5) 
 
 function newton_sqrt(input, error_margin=small_error_margin, guess=input / 2) # a=input/2 is the default value of `a`
   # The infinity assignment guarantees that e will be bigger than error_margin
@@ -13,6 +14,7 @@ function newton_sqrt(input, error_margin=small_error_margin, guess=input / 2) # 
     # so their avg will get closer and closer to the sqrt of input 
     avg = (guess + input/guess)/2.0
     e = convert(Float64, abs(avg - guess))
+    println(e)
     guess = avg
   end
     print("""
@@ -20,5 +22,6 @@ function newton_sqrt(input, error_margin=small_error_margin, guess=input / 2) # 
     """)
 end
 
+# Some examples
 newton_sqrt(9)
 newton_sqrt(25)
