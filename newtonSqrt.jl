@@ -21,7 +21,7 @@ function newton_sqrt(input, error_margin=small_error_margin, guess=input / 2) # 
     The square root of $input is $guess
     """)
 end
-
+ 
 # Some examples
 newton_sqrt(9)
 newton_sqrt(25)
